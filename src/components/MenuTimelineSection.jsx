@@ -88,6 +88,7 @@ const MenuItem = ({ item, index }) => {
             ref={videoRef}
             src={item.videoSrc}
             className={`absolute inset-0 w-full h-full object-cover rounded-full transition-opacity duration-500 ease-in-out ${shouldPlay ? 'opacity-100' : 'opacity-0'}`}
+            preload="none"
             muted
             playsInline
             loop
