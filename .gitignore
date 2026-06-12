@@ -23,12 +23,4 @@ dist-ssr
 *.sln
 *.sw?
 
-# Ignore heavy video assets in public folder
-public/*.webm
-public/*.mp4
 
-# Ignore heavy image assets in public folder
-public/*.jpg
-public/*.jpeg
-public/*.png
-public/*.webp
