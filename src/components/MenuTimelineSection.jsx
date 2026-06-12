@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import { useRef, useState, useEffect } from 'react';
 
 const menuItems = [
   {
@@ -52,13 +52,13 @@ const MenuItem = ({ item, index }) => {
       },
       { threshold: 0.6 } // Triggers when 60% of the circle is visible
     );
-
-    if (containerRef.current) {
-      observer.observe(containerRef.current);
+    const node = containerRef.current;
+    if (node) {
+      observer.observe(node);
     }
 
     return () => {
-      if (containerRef.current) observer.unobserve(containerRef.current);
+      if (node) observer.unobserve(node);
     };
   }, []);
 
