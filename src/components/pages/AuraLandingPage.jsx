@@ -68,7 +68,6 @@ const AuraLandingPage = () => {
       <section className="relative h-screen w-full flex items-center justify-start overflow-hidden bg-neutral-900">
         <video
           src="/Wagyu_ribeye_with_wine_reduction_202606112039.mp4"
-          poster="/Miyazaki A5 Strip.png"
           muted
           playsInline
           autoPlay
