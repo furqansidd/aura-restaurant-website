@@ -45,24 +45,24 @@ const AuraLandingPage = () => {
             <span className={`block h-[1px] w-full bg-white transition-all duration-300 ${isMobileMenuOpen ? '-rotate-45 -translate-y-[7px]' : ''}`} />
           </button>
         </div>
-
-        {/* Mobile Menu Overlay */}
-        <div className={`fixed inset-0 bg-neutral-950/98 backdrop-blur-xl flex flex-col items-center justify-center transition-all duration-500 ease-in-out z-40 ${isMobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
-          <div className="flex flex-col items-center space-y-12">
-            {['MENU', 'THE EXPERIENCE', 'RESERVATIONS'].map((item, idx) => (
-              <a
-                key={item}
-                href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className={`text-sm uppercase tracking-[0.4em] text-white hover:text-neutral-400 transition-all duration-500 transform ${isMobileMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}
-                style={{ transitionDelay: `${isMobileMenuOpen ? idx * 100 + 200 : 0}ms` }}
-              >
-                {item}
-              </a>
-            ))}
-          </div>
-        </div>
       </nav>
+
+      {/* Mobile Menu Overlay */}
+      <div className={`fixed inset-0 bg-neutral-950/95 backdrop-blur-xl flex flex-col items-center justify-center transition-all duration-500 ease-in-out z-40 ${isMobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+        <div className="flex flex-col items-center space-y-12">
+          {['MENU', 'THE EXPERIENCE', 'RESERVATIONS'].map((item, idx) => (
+            <a
+              key={item}
+              href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
+              onClick={() => setIsMobileMenuOpen(false)}
+              className={`text-sm uppercase tracking-[0.4em] text-white hover:text-neutral-400 transition-all duration-500 transform ${isMobileMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}
+              style={{ transitionDelay: `${isMobileMenuOpen ? idx * 100 + 200 : 0}ms` }}
+            >
+              {item}
+            </a>
+          ))}
+        </div>
+      </div>
 
       {/* Section A: Cinematic Hero */}
       <section className="relative h-screen w-full flex items-center justify-start overflow-hidden bg-neutral-900">

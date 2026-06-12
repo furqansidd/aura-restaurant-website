@@ -104,7 +104,7 @@ const MenuItem = ({ item, index }) => {
 
       {/* Content Card */}
       <div className={`w-1/2 flex flex-col justify-center ${isEven ? 'pl-4 sm:pl-16 items-start text-left' : 'pr-4 sm:pr-16 items-end text-right'} z-10`}>
-        <div className={`flex flex-col sm:flex-row items-start sm:items-baseline gap-1 sm:gap-4 mb-1 sm:mb-2 ${isEven ? '' : 'sm:flex-row-reverse'}`}>
+        <div className={`flex flex-col sm:flex-row ${isEven ? 'items-start' : 'items-end'} sm:items-baseline gap-1 sm:gap-4 mb-1 sm:mb-2 ${isEven ? '' : 'sm:flex-row-reverse'}`}>
           <h3 className="text-neutral-100 text-base sm:text-xl font-medium font-serif leading-tight">{item.title}</h3>
           <span className="text-neutral-400 font-sans text-xs sm:text-sm tracking-wide">{item.price}</span>
         </div>
